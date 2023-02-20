@@ -8,8 +8,9 @@
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
+[![GitHub Issues](https://img.shields.io/github/issues/triac-tech/finance-back)](https://github.com/triac-tech/finance-back/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/triac-tech/finance-back)](https://github.com/triac-tech/finance-back/pulls)
+[![Repository size](https://img.shields.io/github/repo-size/triac-tech/finance-back?color=56BEB8)]()
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
@@ -29,7 +30,6 @@
 - [Built Using](#built_using)
 - [TODO](../TODO.md)
 - [Contributing](../CONTRIBUTING.md)
-- [Authors](#authors)
 - [Acknowledgments](#acknowledgement)
 
 ## 🧐 About <a name = "about"></a>
@@ -43,25 +43,73 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 What things you need to install the software and how to install them.
+- Python 3.10
+- Git
 
 ```
 Give examples
 ```
 
-### Installing
+## Installing
 
 A step by step series of examples that tell you how to get a development env running.
 
-Say what the step will be
+### Clone Project:
 
 ```
-Give the example
+git clone git@github.com:triac-tech/finance-back.git
 ```
 
-And repeat
+### Create Virtual Environment:
 
 ```
-until finished
+python -m venv 'NameEnv'
+```
+
+### Activate Virtual Environment:
+
+Windows:
+```
+'NameEnv'\Scripts\activate
+```
+Linux:
+```
+source 'NameEnv'\bin\activate
+```
+### Migrate
+```
+python manage.py migrate
+```
+
+### Run Server
+```
+python manage.py runserver
+```
+
+### Usig Code Formater
+Create folder `.vscode` in vscode IDE and after the file `settings.json`
+
+Copy and paste the code:
+```
+{
+    "isort.args":["--profile", "black"],
+    "[python]": {
+        "editor.formatOnSave": true,
+    },
+
+    "editor.rulers": [
+        80
+    ],
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "python.defaultInterpreterPath": "~/triactech/env/bin/python",
+    "python.formatting.blackPath": "~/triactech/env/bin/black",
+    "python.formatting.provider": "black",
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Path": "~/triactech/env/bin/flake8",
+    "python.linting.pylintEnabled": false,
+    "python.linting.enabled": true,
+  }
 ```
 
 End with an example of getting some data out of the system or using it for a little demo.
@@ -96,19 +144,15 @@ Add additional notes about how to deploy this on a live system.
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
-
-## ✍️ Authors <a name = "authors"></a>
-
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
-
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
+- [Python](https://www.python.org/) - Language Programmation
+- [Django](https://www.djangoproject.com/) - Server Framework
+- [Django Rest Framework](https://www.django-rest-framework.org/) - Server API Framework
+- [VueJs](https://vuejs.org/) - Web Framework (Frontend)
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
 - Hat tip to anyone whose code was used
 - Inspiration
 - References
+
+Developed by [TriacTech](https://github.com/triac-tech/) © all rights reserved
